@@ -7,3 +7,6 @@ handlers:
 - url: /.*
   script: go.py
 
+- url: /admin/.*
+  script: $PYTHON_LIB/google/appengine/ext/admin
+  login: admin
