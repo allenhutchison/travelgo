@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>Go: {% block title %}{% endblock %}</title>
+  </head>
+  <body>
+
+    <div id="header">
+      <div style="float:right">
+        {{ user.nickname }} | 
+        {% block action_link %}<a href="/manage">Manage Trips</a>{% endblock %}
+        | 
+        <a href="{{ logout_url }}">{{ logout_url_linktext }}</a>
+      </div>
+      <div style="font-size:1.5em">Go!</div>
+      <br clear="all" />
+    </div>
+
+    {% block body %}
+    {% endblock %}
+
+  </body>
+</html>
+
