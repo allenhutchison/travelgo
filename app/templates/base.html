@@ -1,21 +1,22 @@
 <html>
   <head>
+    <link type="text/css" rel="stylesheet" href="/static/css/base.css" />
     <title>Go: {% block title %}{% endblock %}</title>
   </head>
   <body>
     <div id="header">
-      <div style="float:right">
-        {{ user.nickname }} | 
-        {% block action_link %}<a href="/manage">Manage Trips</a>{% endblock %} |
+      <div id="linkbar">
+        {% if user.nickname %}
+          {{ user.nickname }} | 
+          {% block action_link %}<a href="/manage">Manage Trips</a>{% endblock %} |
+        {% endif %}
         <a href="{{ log_url }}">{{ log_url_linktext }}</a>
       </div>
-      <div style="font-size:1.5em">Go!</div>
-      <br clear="all" />
+      <div id="logo">Go!</div>
     </div>
-
-    {% block body %}
-    {% endblock %}
-
+    <div id="body">
+      {% block body %}
+      {% endblock %}
+    </div>
   </body>
 </html>
-
