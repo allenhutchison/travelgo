@@ -1,0 +1,1 @@
+A travel organization application, to help people to organize group trips.
